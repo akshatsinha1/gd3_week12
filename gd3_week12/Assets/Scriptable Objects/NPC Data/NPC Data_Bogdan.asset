@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6e8d91a71d7847dca8a17d5948243a5, type: 3}
+  m_Name: NPC Data_Bogdan
+  m_EditorClassIdentifier: 
+  NPCname: 
+  description: 
+  artwork: {fileID: 0}
+  armourLevel: 0
+  age: 0
+  isFriendly: 0

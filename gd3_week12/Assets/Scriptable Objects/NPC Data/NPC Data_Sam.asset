@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6e8d91a71d7847dca8a17d5948243a5, type: 3}
+  m_Name: NPC Data_Sam
+  m_EditorClassIdentifier: 
+  NPCname: Steven
+  description: He is a heroid Paladin
+  artwork: {fileID: 21300000, guid: e8492bb9c29294be48f26f24ff9414d9, type: 3}
+  armourLevel: 9000
+  age: 26
+  isFriendly: 1
