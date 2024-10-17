@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6e8d91a71d7847dca8a17d5948243a5, type: 3}
   m_Name: NPC Data_Basil
   m_EditorClassIdentifier: 
-  NPCname: Bobert
-  description: I am the dak evil knight who unalived your family
-  artwork: {fileID: 0}
-  armourLevel: 0
-  age: 0
+  NPCname: Basil
+  description: I <3 WASPS uwu
+  artwork: {fileID: 21300000, guid: 71266175cc0484a0d9e5303369cae077, type: 3}
+  armourLevel: 2
+  age: 42
   isFriendly: 0

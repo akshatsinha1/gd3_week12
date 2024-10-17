@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6e8d91a71d7847dca8a17d5948243a5, type: 3}
   m_Name: NPC Data_Bogdan
   m_EditorClassIdentifier: 
-  NPCname: 
-  description: 
-  artwork: {fileID: 0}
-  armourLevel: 0
-  age: 0
+  NPCname: Bogdan
+  description: I <3 TARKOV uwu
+  artwork: {fileID: 21300000, guid: d7a2a5cab0bd84b5a9fb81a04831778e, type: 3}
+  armourLevel: 999
+  age: 22
   isFriendly: 0

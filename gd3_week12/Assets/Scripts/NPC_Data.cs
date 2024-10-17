@@ -13,4 +13,9 @@ public class NPC_Data : ScriptableObject
     public int armourLevel;
     public int age;
     public bool isFriendly;
+
+
+    public Color potionCOlor;
+    public int healthEffect = 5;
+    public int StaminaEffect = -10;
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 public class playerMovement : MonoBehaviour
 {
@@ -16,6 +17,11 @@ public class playerMovement : MonoBehaviour
 
     private Touch theTouch;
 
+    PlayerInput _playerInput;
+    InputAction moveAction;
+
+    
+
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +30,9 @@ public class playerMovement : MonoBehaviour
 
         //makes the character look down by default
         lookDirection = new Vector2(0, -1);
+
+        _playerInput = GetComponent<PlayerInput>();
+        moveAction = _playerInput.actions.FindAction("Move");
     }
 
     // Update is called once per frame
@@ -81,10 +90,12 @@ public class playerMovement : MonoBehaviour
 
     void calculateDesktopInputs()
     {
-        float x = Input.GetAxisRaw("Horizontal");
-        float y = Input.GetAxisRaw("Vertical");
+        // float x = Input.GetAxisRaw("Horizontal");
+        // float y = Input.GetAxisRaw("Vertical");
 
-        inputDirection = new Vector2(x, y).normalized;
+        // inputDirection = new Vector2(x, y).normalized;
+
+        inputDirection = moveAction.ReadValue<Vector2>();
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -134,41 +145,41 @@ public class playerMovement : MonoBehaviour
     }
 
     void calculateTouchInputs()
-    {
-        if(Input.touchCount > 0)
-        {
-            theTouch = Input.GetTouch(0);
-            dPad.gameObject.SetActive(true);
+   {
+    //     if(Input.touchCount > 0)
+    //     {
+    //         theTouch = Input.GetTouch(0);
+    //         dPad.gameObject.SetActive(true);
 
-            if(theTouch.phase == TouchPhase.Began)
-            {
-                touchStart = theTouch.position;
-            }
+    //         if(theTouch.phase == TouchPhase.Began)
+    //         {
+    //             touchStart = theTouch.position;
+    //         }
 
-            else if(theTouch.phase == TouchPhase.Moved || theTouch.phase == TouchPhase.Ended)
-            {
-                touchEnd = theTouch.position;
+    //         else if(theTouch.phase == TouchPhase.Moved || theTouch.phase == TouchPhase.Ended)
+    //         {
+    //             touchEnd = theTouch.position;
 
-                float x = touchEnd.x - touchStart.x;
-                float y = touchEnd.y - touchStart.y;
+    //             float x = touchEnd.x - touchStart.x;
+    //             float y = touchEnd.y - touchStart.y;
 
-                inputDirection = new Vector2(x, y).normalized;
+    //             inputDirection = new Vector2(x, y).normalized;
 
-                if ((touchEnd - touchStart).magnitude > dPadRadius)
-                {
-                    dPad.transform.position = touchStart + (touchEnd - touchStart).normalized * dPadRadius;
-                }
-                else
-                {
-                    dPad.transform.position = touchEnd;
-                }
-            }
-        }
-        else
-        {
-            inputDirection = Vector2.zero;
-            dPad.gameObject.SetActive(false);
-        }
+    //             if ((touchEnd - touchStart).magnitude > dPadRadius)
+    //             {
+    //                 dPad.transform.position = touchStart + (touchEnd - touchStart).normalized * dPadRadius;
+    //             }
+    //             else
+    //             {
+    //                 dPad.transform.position = touchEnd;
+    //             }
+    //         }
+    //     }
+    //     else
+    //     {
+    //         inputDirection = Vector2.zero;
+    //         dPad.gameObject.SetActive(false);
+    //     }
     }
 
     #endregion

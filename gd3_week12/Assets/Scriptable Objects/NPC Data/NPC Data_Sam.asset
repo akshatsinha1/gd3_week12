@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6e8d91a71d7847dca8a17d5948243a5, type: 3}
   m_Name: NPC Data_Sam
   m_EditorClassIdentifier: 
-  NPCname: Steven
-  description: He is a heroid Paladin
-  artwork: {fileID: 21300000, guid: e8492bb9c29294be48f26f24ff9414d9, type: 3}
-  armourLevel: 9000
-  age: 26
+  NPCname: Sam
+  description: half Pixelbender half leopard
+  artwork: {fileID: 21300000, guid: dfc345725ef7b4257ad29616a0a4a284, type: 3}
+  armourLevel: -3
+  age: 13
   isFriendly: 1
