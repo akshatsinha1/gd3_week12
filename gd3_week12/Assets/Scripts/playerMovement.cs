@@ -40,13 +40,9 @@ public class playerMovement : MonoBehaviour
     {
         //getting input from keyboard controls
 
-#if UNITY_EDITOR
-        calculateDesktopInputs();
-#elif UNITY_ANDROID 
+
         calculateMobileInput();
-#elif UNITY_IOS
-        calculateTouchInputs();
-#endif  
+
 
         //sets up the animator
         animationSetup();
